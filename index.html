@@ -2,8 +2,17 @@
 <html>
 <body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+<video class="myVideos" controls poster="video_kapak.jpg" width="100%" height="unset"><source src="https://instagram.fadb3-1.fna.fbcdn.net/o1/v/t16/f1/m82/764713FA39F9FEA008CFB6C30BECD7B0_video_dashinit.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLjcyMC5jbGlwcy5iYXNlbGluZSJ9&_nc_ht=instagram.fadb3-1.fna.fbcdn.net&_nc_cat=102&vs=588634699816167_3973976843&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC83NjQ3MTNGQTM5RjlGRUEwMDhDRkI2QzMwQkVDRDdCMF92aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVABgkR0dkbzZoTVA5UEhsSGE4QUFNMDM0WUxrNEwxWWJxX0VBQUFGFQICyAEAKAAYABsAFQAAJoif7sO68MlAFQIoAkMzLBdAH3bItDlYEBgSZGFzaF9iYXNlbGluZV8xX3YxEQB1%2FgcA&_nc_rid=f63ec457d1&ccb=9-4&oh=00_AfAwd9WYEcAURk76zA2anW6NINjCZpKE3RsIerzOCKpoTA&oe=6459FCEF&_nc_sid=47b4fb" type="video/mp4">Your browser does not support the video tag.</video>
+
+<script>
+    var videos = document.querySelectorAll(".myVideos");
+    videos.forEach(function(video) {
+        video.addEventListener("ended", function() {
+            video.currentTime = 0;
+            video.play();
+        });
+    });
+</script>
 
 </body>
 </html>
